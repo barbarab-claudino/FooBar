@@ -1,0 +1,74 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+code:
+  name: Code
+  price: 7.15
+  category: Books
+  main_photo: http://ecx.images-amazon.com/images/I/31GBgcA5PML._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA240_SH20_OU02_.jpg
+  description: Crossing over into general-interest non-fiction from his popular programming manuals, Charles Petzold has written Code: The Hidden Language of Computer Hardware and
+      Software. It's a carefully written, carefully researched gem that will appeal to anyone who
+      wants to understand computer technology at its most essential levels. Readers learn about
+      number systems(decimal, octal, binary and all that) through Petzold's patient (and frequently
+      entertaining) prose, then discover the logical systems that are used to process them. There's
+      loads of historical information, too. From Louis Braille's development of his eponymous
+      raised-dot code to Intel Corporation's release of its early microprocessors, Petzold presents
+      the stories of people trying to find ways to communicate with (and by means of) mechanical and
+      electrical devices. It's a fascinating progression of technologies and the author presents a
+      clear statement of how they fit together. The real value of Code is in its explanations of
+      technologies that have been obscured for years behind fancy user interfaces and programming
+      environments that, in the name of rapid application development, insulate the programmer from
+      the machine. In a section on machine language, Petzold dissects the instruction sets of the
+      genre-defining Intel 8080 and Motorola6800 processors. He walks the reader through the process
+      of performing various operations with each chip, explaining which op codes poke which values
+      into which registers along the way. Petzold knows that the hidden language of computers
+      exhibits real beauty. In Code, he helps his readers appreciate it. --David Wall Topics
+      covered: Mechanical and electrical representations of words and numbers, number systems, logic
+      gates, performing mathematical operations with logic gates, microprocessors, machine code,
+      memory and programming languages. --This text refers to an out of print or unavailable edition
+      of this title.
+
+ruby_kindle:
+  name: The Ruby Way, Second Edition
+  price: 19.12
+  category: Kindle Store
+  main_photo: http://ecx.images-amazon.com/images/I/413K6WbfbjL._SL500_AA258_PIkin4,BottomRight,-31,22_AA280_SH20_OU02_.jpg
+  description: This is the eBook version of the printed book. Ruby is an agile object-oriented
+      language, borrowing some of the best features from LISP, Smalltalk, Perl, CLU, and other
+      languages. Its popularity has grown tremendously in the five years since the first edition of
+      this book. &amp;#xa0; The Ruby Way takes a &amp;#x201c;how-to&amp;#x201d; approach to Ruby
+      programming with the bulk of the material consisting of more than 400 examples arranged by
+      topic. Each example answers the question &amp;#x201c;How do I do this in Ruby?&amp;#x201d;
+      Working along with the author, you are presented with the task description and a discussion of
+      the technical constraints. This is followed by a step-by-step presentation of one good
+      solution. Along the way, the author provides detailed commentary and explanations to aid your
+      understanding. &amp;#xa0; Coverage includes &amp;#xa0;
+      &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; An overview of Ruby, explaining terminology and
+      basic principles &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Operations on low-level data types
+      (numbers, strings, regular expressions, dates) &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; The
+      new regular expression engine (Oniguruma) &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0;
+      Internationalization (I18N) and message catalogs in Ruby
+      &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Operations on hashes, arrays, and other data
+      structures such as stacks, trees, and graphs &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0;
+      Working with general I/O, files, and persistent objects
+      &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Database coverage including MySQL, SQLite, Oracle,
+      DBI, and more &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Ruby-specific techniques in OOP and
+      dynamic programming &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Graphical interfaces in Ruby
+      (Tk, GTK+, Fox, and Qt) &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Working with Ruby threads
+      for lightweight multitasking &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Everyday scripting and
+      system administration in Ruby &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Working with image
+      files, PDFs, YAML, XML, RSS, and Atom &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Testing,
+      debugging, profiling, and packaging Ruby code &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0;
+      Low-level network programming and client-server interaction
+      &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Web development tools including Rails, Nitro, Wee,
+      IOWA, and more &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Working with distributed Ruby,
+      Rinda, and Ring &amp;#x2022;&amp;#xa0;&amp;#xa0;&amp;#xa0; Ruby development tools such as
+      IDEs, documentation tools, and more &amp;#xa0; The source code for the book can be downloaded
+      from www.rubyhacker.com &amp;#xa0; &amp;#xa0; Hal Fulton has worked for over 15 years with
+      variousforms of Unix, including AIX, Solaris, and Linux. He was first exposed to Ruby in 1999,
+      and in 2001 he began work on the first edition of this book&amp;#x2013;the second Ruby book
+      published in the English language. He has attendednumerous Ruby conferences and has given
+      presentations at several of those, including the first European Ruby Conference.&amp;#xa0;
+      &amp;#xa0; He has two degrees in computer science from the University of Mississippi and
+      taught computer science for four years before moving to Austin, Texas to work as a contractor
+      for variouscompanies, including IBM Austin.&amp;#xa0; Hal currently works at Broadwing
+      Communications in Austin, Texas, maintaining a large data warehous...

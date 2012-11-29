@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fabricante.name %>
+</p>
+
+<p>
+  <b>Cnpj:</b>
+  <%= @fabricante.cnpj %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @fabricante.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @fabricante.address %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @fabricante.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_fabricante_path(@fabricante) %> |
+<%= link_to 'Back', fabricantes_path %>
