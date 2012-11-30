@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
 	
 	has_and_belongs_to_many :client
 	belongs_to :fabricante
+	
   attr_accessible :category, :description, :main_photo, :name, :price
   
   validates_presence_of :name, message:"O nome deve ser preenchido"

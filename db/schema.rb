@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20121129230921) do
   end
 
   create_table "clients_products", :id => false, :force => true do |t|
-    t.integer "clients_id"
-    t.integer "products_id"
+    t.integer "client_id"
+    t.integer "product_id"
   end
 
   create_table "fabricantes", :force => true do |t|

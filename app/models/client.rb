@@ -1,8 +1,8 @@
 class Client < ActiveRecord::Base
 
-  attr_accessible :address, :cpf, :email, :login, :name, :password, :phone
+   has_and_belongs_to_many :product
   
-  	has_and_belongs_to_many :product
+  attr_accessible :address, :cpf, :email, :login, :name, :password, :phone
   
    validates_presence_of :name, message:"O nome deve ser preenchido"
    
