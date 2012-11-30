@@ -1,11 +1,4 @@
-require 'test_helper'
-
-class ProductTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
-
+#encoding: utf-8
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
@@ -15,8 +8,8 @@ class ProductTest < ActiveSupport::TestCase
 			:name => products(:code).name,
 			:price => products(:code).price,
 			:category => products(:code).category)
-			:main_photo: => products(:code).main_photo)
-			:description: => products(:code).description)
+			:main_photo => products(:code).main_photo)
+			:description => products(:code).description)
 		msg = "produto nao foi salvo. "
 			+ "errors: ${products.errors.inspect}"
 		assert products.save, msg

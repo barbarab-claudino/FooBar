@@ -2,14 +2,18 @@
 
 one:
   name: MyString
-  email: MyString
-  phone: MyString
-  address: MyString
   cpf: 1
+  email: MyString
+  address: MyString
+  phone: 1
+  login: MyString
+  password: MyString
 
 two:
   name: MyString
-  email: MyString
-  phone: MyString
-  address: MyString
   cpf: 1
+  email: MyString
+  address: MyString
+  phone: 1
+  login: MyString
+  password: MyString

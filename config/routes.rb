@@ -1,14 +1,11 @@
 FooBar::Application.routes.draw do
+  resources :clients
+
+
   resources :admins
 
 
   resources :fabricantes
-
-
-  resources :clients
-
-
-  resources :related_products
 
 
   resources :products

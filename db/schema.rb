@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121128210136) do
+ActiveRecord::Schema.define(:version => 20121129230921) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -22,13 +22,20 @@ ActiveRecord::Schema.define(:version => 20121128210136) do
   end
 
   create_table "clients", :force => true do |t|
-    t.string   "name",       :limit => 80
+    t.string   "name"
+    t.integer  "cpf"
     t.string   "email"
-    t.integer  "phone",      :limit => 12
     t.string   "address"
-    t.integer  "cpf",        :limit => 11
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.integer  "phone"
+    t.string   "login"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "clients_products", :id => false, :force => true do |t|
+    t.integer "clients_id"
+    t.integer "products_id"
   end
 
   create_table "fabricantes", :force => true do |t|
@@ -43,24 +50,12 @@ ActiveRecord::Schema.define(:version => 20121128210136) do
 
   create_table "products", :force => true do |t|
     t.string   "name",        :limit => 50
-    t.decimal  "price",                     :precision => 8, :scale => 2
+    t.decimal  "price",                      :precision => 8, :scale => 2
     t.string   "category",    :limit => 80
     t.string   "main_photo"
-    t.string   "description"
-    t.datetime "created_at",                                              :null => false
-    t.datetime "updated_at",                                              :null => false
-  end
-
-  create_table "products_clients", :id => false, :force => true do |t|
-    t.integer "product_id"
-    t.integer "client_id"
-  end
-
-  create_table "related_products", :force => true do |t|
-    t.string   "name",       :limit => 80
-    t.string   "photo"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.string   "description", :limit => 366
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
   end
 
 end

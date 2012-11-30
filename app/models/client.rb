@@ -1,9 +1,8 @@
-#encoding: utf-8
 class Client < ActiveRecord::Base
 
-	has_and_belongs_to_many :product
-	
-  attr_accessible :address, :cpf, :email, :name, :phone, :login, :password
+  attr_accessible :address, :cpf, :email, :login, :name, :password, :phone
+  
+  	has_and_belongs_to_many :product
   
    validates_presence_of :name, message:"O nome deve ser preenchido"
    

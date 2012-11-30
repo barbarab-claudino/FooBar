@@ -1,7 +1,7 @@
 #encoding: utf-8
 class Fabricante < ActiveRecord::Base
 
-	belongs_to :product
+	has_many :product
 	
   attr_accessible :address, :cnpj, :email, :name, :phone
   

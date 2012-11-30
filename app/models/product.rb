@@ -2,8 +2,7 @@
 class Product < ActiveRecord::Base
 	
 	has_and_belongs_to_many :client
-	has_one :fabricante
-	
+	belongs_to :fabricante
   attr_accessible :category, :description, :main_photo, :name, :price
   
   validates_presence_of :name, message:"O nome deve ser preenchido"
@@ -16,5 +15,5 @@ class Product < ActiveRecord::Base
   validates :main_photo, allow_blank: true, format: {
 	with: %r{\.(gif|jpg|png)$}i,
 	message: "O campo deve ser uma URL em formato GIF, JPG ou PNG."
-  
+	}   
 end
