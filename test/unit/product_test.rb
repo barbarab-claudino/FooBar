@@ -7,9 +7,10 @@ class ProductTest < ActiveSupport::TestCase
 		product = Product.new(
 			:name => products(:code).name,
 			:price => products(:code).price,
-			:category => products(:code).category)
-			:main_photo => products(:code).main_photo)
+			:category => products(:code).category
+			:main_photo => products(:code).main_photo
 			:description => products(:code).description)
+			
 		msg = "produto nao foi salvo. "
 			+ "errors: ${products.errors.inspect}"
 		assert products.save, msg
