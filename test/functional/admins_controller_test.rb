@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AdminsControllerTest < ActionController::TestCase
   setup do
-    @admin = admins(:one)
+    @admin = admins(:admin1)
   end
 
   test "should get index" do

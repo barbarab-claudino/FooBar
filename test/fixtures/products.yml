@@ -3,13 +3,11 @@
 code:
   name: Code
   price: 7.15
-  category: Books
   main_photo: http://ecx.images-amazon.com/images/I/31GBgcA5PML._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA240_SH20_OU02_.jpg
   description: Crossing over into general-interest non-fiction from his popular programming manuals, Charles Petzold has written Code The Hidden Language of Computer Hardware and
 
 ruby_kindle:
   name: The Ruby Way, Second Edition
   price: 19.12
-  category: Kindle Store
   main_photo: http://ecx.images-amazon.com/images/I/413K6WbfbjL._SL500_AA258_PIkin4,BottomRight,-31,22_AA280_SH20_OU02_.jpg
   description: This is the eBook version of the printed book. Ruby is an agile object-oriented

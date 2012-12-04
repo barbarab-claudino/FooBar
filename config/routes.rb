@@ -1,4 +1,10 @@
 FooBar::Application.routes.draw do
+  resources :categories
+
+
+  resources :products
+
+
   resources :clients
 
 
@@ -6,9 +12,6 @@ FooBar::Application.routes.draw do
 
 
   resources :fabricantes
-
-
-  resources :products
 
 
   # The priority is based upon order of creation:

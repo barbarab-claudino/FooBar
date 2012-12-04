@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FabricantesControllerTest < ActionController::TestCase
   setup do
-    @fabricante = fabricantes(:one)
+    @fabricante = fabricantes(:samsung)
   end
 
   test "should get index" do

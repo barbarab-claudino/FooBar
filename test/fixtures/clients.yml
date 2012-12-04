@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  cpf: 1
-  email: MyString
-  address: MyString
-  phone: 1
-  login: MyString
-  password: MyString
+client1:
+  name: Julia
+  cpf: 19382131231
+  email: julia@gmail.com
+  address: Rua da Residencia, 07
+  phone: 293812391283
+  login: juhhcarmona
+  password: 123456
 
-two:
-  name: MyString
-  cpf: 1
-  email: MyString
-  address: MyString
-  phone: 1
-  login: MyString
-  password: MyString
+client2:
+  name: Barbara
+  cpf: 2310231
+  email: barbara@gmail.com
+  address: Rua batatinha, 34
+  phone: 0923842342
+  login: bahbbc
+  password: 654321

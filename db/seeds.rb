@@ -11,7 +11,6 @@ Product.delete_all
 
 Product.create(name: 'Staedtler Triplus Colour 323 SB20 Fibre Tip Pens In Desktop Box - 20 Assorted Colours',
   price: 10.87,
-  category: 'Office Products',
   main_photo: 'http://ecx.images-amazon.com/images/I/51LMuSwq2KL._SL500_AA280_.jpg',
   description:
     %{<p>
@@ -29,7 +28,6 @@ Product.create(name: 'Staedtler Triplus Colour 323 SB20 Fibre Tip Pens In Deskto
 
 Product.create(name: 'The Ruby Programming Language eBook',
 	price: 15.11,
-	category: 'Kindle Store',
 	main_photo:'http://ecx.images-amazon.com/images/I/51c3tL7dShL._SL500_AA258_PIkin4,BottomRight,-30,22_AA280_SH20_OU02_.jpg',    
   description: 
     %{<p>
@@ -56,7 +54,6 @@ Product.create(name: 'The Ruby Programming Language eBook',
   
   Product.create(name: 'Office for Mac 2011, Home and Student Edition (1 User, 1Mac)',
   price: 70.80,
-  category: 'Software',
   main_photo: 'http://ecx.images-amazon.com/images/I/41PN1CYA0RL._SL500_AA280_.jpg',
   description:
     %{<p>
@@ -120,7 +117,6 @@ Product.create(name: 'The Ruby Programming Language eBook',
 # . . .
 Product.create(name: 'Programming Ruby 1.9',
   price: 49.95,
-  category: 'Books',
   main_photo: 'ruby.jpg',
   description:
     %{<p>
@@ -133,7 +129,6 @@ Product.create(name: 'Programming Ruby 1.9',
 
 Product.create(name: 'Olympus TRHLC-120 Traveller Hard Leather Case',
   price: 19.99,
-  category: 'Electronics',
   main_photo: 'http://ecx.images-amazon.com/images/I/51ajRCcFnuL._SL500_AA280_.jpg',
   description: 
     %{<p>
@@ -147,7 +142,6 @@ Product.create(name: 'Olympus TRHLC-120 Traveller Hard Leather Case',
 
 Product.create(name: 'My Book Essential WDBAAF0020HBK - Hard drive - 2 TB - external - Hi-Speed USB',
   price: 75.54,
-  category: 'Computers & Accessories',
   main_photo: 'http://ecx.images-amazon.com/images/I/31UkWrSrq8L._SL500_AA280_.jpg',
   description: 
     %{<p>
