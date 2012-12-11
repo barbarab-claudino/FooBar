@@ -1,7 +1,8 @@
 class Category < ActiveRecord::Base
 
 	has_many :product
-  attr_accessible :description, :name
+  
+  attr_accessible :description, :name, :category_id
   
    validates_presence_of :name, message:"O nome deve ser preenchido"
     

@@ -25,7 +25,8 @@ class Product < ActiveRecord::Base
   validates_presence_of :price, message:"O preco deve ser preenchido"
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   
-  validates_presence_of :category, message:"A categoria deve ser preenchida"
+  validates_presence_of :category_id
+  validates_associated :category
   
   validates :main_photo, allow_blank: true, format: {
 	with: %r{\.(gif|jpg|png)$}i,
