@@ -6,6 +6,9 @@ class Product < ActiveRecord::Base
 	belongs_to :category
 	has_many :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
+
+	attr_accessible :description, :main_photo, :name, :price, :category_id
+
 	
 	 private
 		# ensure that there are no line items referencing this product
@@ -18,7 +21,6 @@ class Product < ActiveRecord::Base
 		end
 	end
 	
-  attr_accessible :description, :main_photo, :name, :price
 	
   validates_presence_of :name, message:"O nome deve ser preenchido"
   
