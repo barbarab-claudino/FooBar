@@ -7,7 +7,6 @@ class ProductTest < ActiveSupport::TestCase
 		product = Product.new(
 			:name => products(:code).name,
 			:price => products(:code).price,
-			:category => products(:code).category,
 			:main_photo => products(:code).main_photo,
 			:description => products(:code).description,
 			:category_id => products(:code).category_id)
