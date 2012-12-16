@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
 	belongs_to :fabricante
 	belongs_to :category
 	has_many :line_items
+	has_many :photo
 	before_destroy :ensure_not_referenced_by_any_line_item
 
 	attr_accessible :description, :main_photo, :name, :price, :category_id

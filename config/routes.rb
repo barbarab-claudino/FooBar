@@ -1,4 +1,7 @@
 FooBar::Application.routes.draw do
+  resources :photos
+
+
   resources :line_items
 
 
