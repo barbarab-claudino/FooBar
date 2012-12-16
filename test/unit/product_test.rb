@@ -10,13 +10,19 @@ class ProductTest < ActiveSupport::TestCase
 			:main_photo => products(:code).main_photo,
 			:description => products(:code).description,
 			:category_id => products(:code).category_id)
+
+			#testes de validacao do preço do produto
+			product.price = -1
+			assert product.invalid?
+			assert_equal "o preço deve ser maior que 0.01",
+				product.errors[:price].join('; ')
 			
-		msg = "produto nao foi salvo. "
-			+ "errors: ${products.errors.inspect}"
-		assert products.save, msg
-		
-		products_code_copia = Product.find(product.id)
-		
-		assert_equal product.nome, product_code_copia.nome
+			product.price = 0
+			assert product.invalid?
+			assert_equal "o preço deve ser maior que 0.01"
+				product.errors[:price].join('; ')
+				
+			product.price = 1
+			assert product.valid?	
 	end
 end
