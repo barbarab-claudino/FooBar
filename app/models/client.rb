@@ -13,7 +13,6 @@ class Client < ActiveRecord::Base
    validates_presence_of :email, message:"O email deve ser preenchido"
 
    validates_presence_of :phone, message:"O telefone deve ser preenchido"   
-   #validates :phone, numericality: {greater_than: 10}, message:"O telefone deve conter o DD+8 digitos"
    
    validates_presence_of :login
    validates :login, numericality: {greater_than: 4}

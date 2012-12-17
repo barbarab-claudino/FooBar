@@ -1,4 +1,8 @@
 FooBar::Application.routes.draw do
+  get "store/index"
+
+  get "control/index"
+
   resources :photos
 
 
@@ -22,6 +26,8 @@ FooBar::Application.routes.draw do
 
   resources :fabricantes
 
+  root to: 'control#index', as: 'control'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
