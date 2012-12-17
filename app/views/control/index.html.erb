@@ -1,17 +1,10 @@
-<% if notice %>
+﻿<% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Catalogo de Produtos</h1>
+<h1>Opções de Administrador</h1>
+<%= link_to 'Product', products_path %>
+<%= link_to 'Fabricante', fabricantes_path %>
+<%= link_to 'Admin', admins_path %>
+<%= link_to 'Category', categories_path %>
 
-<% @products.each do |product| %>
-<div class="entry">
-<%= 
-image_tag(Photo.select(photo.path).where(pr.nome=Product.find_by_name(product.name))).joins(as photo inner join pr on photo.product_id= pr.id)
-<h3><%= product.name %></h3>
-<%= sanitize(product.description) %>
-<div class="price_line">
-<span class="price"><%= product.price %></span>
-</div>
-</div>
-<% end %>

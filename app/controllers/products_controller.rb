@@ -25,7 +25,8 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-
+	@categories = Category.all
+	
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
@@ -35,6 +36,8 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+	@categories = Category.all
+
   end
 
   # POST /products
@@ -76,7 +79,7 @@ class ProductsController < ApplicationController
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to control_url }
       format.json { head :no_content }
     end
   end

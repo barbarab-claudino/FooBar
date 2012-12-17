@@ -1,15 +1,1 @@
-﻿<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-
-<h1>Catalogo de Produtos</h1>
-
-<% @products.each do |product| %>
-	<div class="entry">
-		<h3><%= product.name %></h3>
-		<%= sanitize(product.description) %>
-		<div class="price_line">
-			<span class="price"><%= product.price %></span>
-		</div>
-	</div>
-<% end %>
+﻿
