@@ -3,7 +3,7 @@
 code:
   name: Code
   price: 7.15
-  main_photo:
+  main_photo: 
   description: Crossing over into general-interest non-fiction from his popular programming manuals, Charles Petzold has written Code The Hidden Language of Computer Hardware and
   category_id: Category.find_by_name("Books").id 
 

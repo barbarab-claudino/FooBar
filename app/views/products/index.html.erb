@@ -8,7 +8,8 @@
 <% @products.each do |product| %>
 	<div class="entry">
 		<h3><%= product.name %></h3>
-		<%= image_tag(Photo.find(Product.find_by_name(product.name).id).path) %>
+		<%= image_tag(Photo.select ('ph.path').where("pr.name = product.name").joins("as ph inner join products as pr on ph.product_id = pr.id"))%>
+		
 		<%= sanitize(product.description) %>
 		<div class="price_line">
 			<span class="price"><%= product.price %></span>
