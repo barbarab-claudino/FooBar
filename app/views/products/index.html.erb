@@ -8,19 +8,22 @@
 <% @products.each do |product| %>
 	<div class="entry">
 		<h3><%= product.name %></h3>
-		<%= image_tag(Photo.select ('ph.path').where("pr.name = product.name").joins("as ph inner join products as pr on ph.product_id = pr.id"))%>
+		
+		<%@test = ((Photo.joins ('JOIN products ON products.id = photos.product_id'))).select(:path)%>
+		
+		<%= image_tag(@test.find(product.id).path)%>
 		
 		<%= sanitize(product.description) %>
 		<div class="price_line">
 			<span class="price"><%= product.price %></span>
 		</div>
-		<div class="category_line">
-			<span class="category"><%= (Category.find(product.category_id)).name %></span>
-		</div>
+
+			<div class="category_line">
+				<span class="category"><%= (Category.find(product.category_id).name) %></span>
+			</div>
+
 	</div>
 	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Você quer mesmo deletar este produto?' } %>
 	<%= link_to 'Edit', edit_product_path(product) %>
 
 <% end %>
-
-

@@ -16,8 +16,7 @@
     <%= f.text_field :path %>
   </div>
   <div class="field">
-    <%= f.label :product_id %><br />
-    <%= f.number_field :product_id %>
+  <%= f.hidden_field :gallery_id , :value=>params[:gallery_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
 	@categories = Category.all
+	@photo = Photo.find(params[:photo.id])
 	
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +38,7 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
 	@categories = Category.all
+	@fabricantes = Fabricante.all
 
   end
 
@@ -44,10 +46,12 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-
+	@categories = Category.all
+	@photo = Photo.find(params[:photo.id])
+	
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Produto criado com sucesso!' }
         format.json { render json: @product, status: :created, location: @product }
       else
         format.html { render action: "new" }
@@ -60,7 +64,8 @@ class ProductsController < ApplicationController
   # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
-
+	@categories = Category.all
+	
     respond_to do |format|
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }

@@ -1,4 +1,4 @@
-#encoding: utf-8
+ï»¿#encoding: utf-8
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
@@ -11,17 +11,12 @@ class ProductTest < ActiveSupport::TestCase
 			:description => products(:code).description,
 			:category_id => products(:code).category_id)
 
-			#testes de validacao do preço do produto
+			#testes de validacao do preÃ§o do produto
 			product.price = -1
 			assert product.invalid?
-			assert_equal "o preço deve ser maior que 0.01",
+			assert_equal "must be greater than or equal to 0.01",
 				product.errors[:price].join('; ')
-			
-			product.price = 0
-			assert product.invalid?
-			assert_equal "o preço deve ser maior que 0.01"
-				product.errors[:price].join('; ')
-				
+					
 			product.price = 1
 			assert product.valid?	
 	end

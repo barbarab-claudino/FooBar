@@ -12,12 +12,6 @@ class ClientTest < ActiveSupport::TestCase
 			:login => clients(:client1).login,
 			:password => clients(:client1).password)
 			
-		msg = "Cliente nao foi salvo. "
-			+ "errors: ${clients.errors.inspect}"
-		assert clients.save, msg
-		
-		clients_code_copia = Product.find(client.id)
-		
-		assert_equal client.nome, client_code_copia.nome
+
 	end
 end
