@@ -19,7 +19,7 @@
 		</div>
 
 			<div class="category_line">
-				<span class="category"><%= (Category.find(product.category_id).name) %></span>
+				<span class="category"><%= (Category.joins(:products).select("distinct(categories.id)"))%></span>
 			</div>
 
 	</div>

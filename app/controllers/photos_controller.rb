@@ -24,8 +24,9 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
-    @photo = Photo.new
-	@products = Product.all
+	@product = Product.find(params[:id])
+    #@photo = Photo.new
+	@product.photo.new(params[:photo])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,11 +43,14 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(params[:photo])
-
+	@product = Product.find(params[:id])
+    @photo = @product.photo.new(params[:topic])
+	#@photo = Photo.new(params[:photo])
+	@photo.product_id = @product.id
+	
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to @product, :id =>@product ,notice: 'Photo was successfully created.' }
         format.json { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }

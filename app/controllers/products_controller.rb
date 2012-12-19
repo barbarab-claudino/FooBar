@@ -26,7 +26,6 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
 	@categories = Category.all
-	@photo = Photo.find(params[:photo.id])
 	
     respond_to do |format|
       format.html # new.html.erb
@@ -38,8 +37,7 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
 	@categories = Category.all
-	@fabricantes = Fabricante.all
-
+	
   end
 
   # POST /products
@@ -47,7 +45,6 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
 	@categories = Category.all
-	@photo = Photo.find(params[:photo.id])
 	
     respond_to do |format|
       if @product.save

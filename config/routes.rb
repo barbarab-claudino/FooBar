@@ -14,11 +14,10 @@ FooBar::Application.routes.draw do
 
   resources :categories
 
+  resources :products 
 
-  resources :products do
-	 resources :photos do
-	end		
-  end
+  resources :photos 
+
 
   resources :clients
 
