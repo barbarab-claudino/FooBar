@@ -9,20 +9,19 @@
 	<div class="entry">
 		<h3><%= product.name %></h3>
 		
-		<%@test = ((Photo.joins ('JOIN products ON products.id = photos.product_id'))).select(:path)%>
-		
-		<%= image_tag(@test.find(product.id).path)%>
-		
-		<%= sanitize(product.description) %>
 		<div class="price_line">
 			<span class="price"><%= product.price %></span>
 		</div>
 
 			<div class="category_line">
-				<span class="category"><%= (Category.joins(:products).select("distinct(categories.id)"))%></span>
+				<span class="category"><%= product.category.name %></span>
 			</div>
-
 	</div>
+
+	<% if product.photo.first %>
+		<%= image_tag product.photo.first.image_url %>
+	<% end %>
+
 	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Você quer mesmo deletar este produto?' } %>
 	<%= link_to 'Edit', edit_product_path(product) %>
 

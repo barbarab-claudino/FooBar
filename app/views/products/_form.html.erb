@@ -27,9 +27,6 @@
 	<%= f.label :category%><br/>
 	<%= f.select :category_id, @categories.collect { |c| [c.name, c.id]}%>
   </div>
-   <div class="field">
-	<%= f.label :main_photo%><br/>
-	<%= f.text_field :main_photo %>
   <div class="actions">
     <%= f.submit %>
   </div>

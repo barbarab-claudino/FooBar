@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20121215231251) do
   end
 
   create_table "photos", :force => true do |t|
-    t.string   "path"
+    t.string   "image"
     t.integer  "product_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

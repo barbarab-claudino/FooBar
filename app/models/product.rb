@@ -31,7 +31,7 @@ class Product < ActiveRecord::Base
   
   validates_presence_of :category_id, message:"Primeiro crie uma categoria!"
   
-  validates_presence_of :main_photo, message: "Adicione uma foto"
+  #validates_presence_of :main_photo, message: "Adicione uma foto"
 	
   
 end

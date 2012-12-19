@@ -2,7 +2,8 @@ require 'test_helper'
 
 class PhotosControllerTest < ActionController::TestCase
   setup do
-    @photo = photos(:one)
+    @photo_one = photos(:one)
+    @photo_two = photos(:two)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class PhotosControllerTest < ActionController::TestCase
 
   test "should create photo" do
     assert_difference('Photo.count') do
-      post :create, photo: { path: @photo.path, product_id: @photo.product_id }
+      post :create, photo: { image: @photo.image, product_id: @photo.product_id }
     end
 
     assert_redirected_to photo_path(assigns(:photo))
@@ -35,7 +36,7 @@ class PhotosControllerTest < ActionController::TestCase
   end
 
   test "should update photo" do
-    put :update, id: @photo, photo: { path: @photo.path, product_id: @photo.product_id }
+    put :update, id: @photo, photo: { image: @photo.image, product_id: @photo.product_id }
     assert_redirected_to photo_path(assigns(:photo))
   end
 

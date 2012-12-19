@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Path:</b>
-  <%= @photo.path %>
+	<%= image_tag @photo.image_url.to_s if @photo.image? %>
 </p>
 
 <p>
   <b>Product:</b>
-  <%= @photo.product_id %>
+  <%= @photo.product %>
 </p>
 
 

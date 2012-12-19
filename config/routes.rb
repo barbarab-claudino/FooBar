@@ -8,7 +8,9 @@ FooBar::Application.routes.draw do
 
   resources :line_items
 
+
   resources :carts
+
 
   resources :categories
 
@@ -16,10 +18,13 @@ FooBar::Application.routes.draw do
 
   resources :photos 
 
+
   resources :clients
 
+
   resources :admins
-  
+
+
   resources :fabricantes
 
   root to: 'control#index', as: 'control'

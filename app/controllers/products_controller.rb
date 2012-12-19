@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-
+    # @photos = @products.photo
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
@@ -81,7 +81,7 @@ class ProductsController < ApplicationController
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to control_url }
+      format.html { redirect_to products_url }
       format.json { head :no_content }
     end
   end

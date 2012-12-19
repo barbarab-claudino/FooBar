@@ -1,6 +1,5 @@
 class Photo < ActiveRecord::Base
-
+  	attr_accessible :image, :product_id, :remote_image_url
 	belongs_to :product
-	
-  attr_accessible :path, :product_id
+	mount_uploader :image, ImageUploader
 end

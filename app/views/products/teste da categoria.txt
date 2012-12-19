@@ -1,1 +1,0 @@
-<span class="category"><%= (Category.find(product.category_id).name) %></span>

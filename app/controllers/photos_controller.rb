@@ -24,33 +24,24 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
-	@product = Product.find(params[:id])
-    #@photo = Photo.new
-	@product.photo.new(params[:photo])
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @photo }
-    end
+    @photo = Photo.new(:product_id => params[:product_id])
   end
 
   # GET /photos/1/edit
   def edit
-    @photo = Photo.find(params[:id])
+  @photo = Photo.find(params[:id])
 	@products = Product.all
   end
 
   # POST /photos
   # POST /photos.json
   def create
-	@product = Product.find(params[:id])
-    @photo = @product.photo.new(params[:topic])
+  @photo = Photo.new(params[:photo])
 	#@photo = Photo.new(params[:photo])
-	@photo.product_id = @product.id
 	
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @product, :id =>@product ,notice: 'Photo was successfully created.' }
+        format.html { redirect_to @photo.product ,notice: 'Photo was successfully created.' }
         format.json { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }
@@ -82,7 +73,7 @@ class PhotosController < ApplicationController
     @photo.destroy
 
     respond_to do |format|
-      format.html { redirect_to photos_url }
+      format.html { redirect_to @photo.product }
       format.json { head :no_content }
     end
   end
