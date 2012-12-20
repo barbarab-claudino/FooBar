@@ -1,15 +1,9 @@
 FooBar::Application.routes.draw do
   resources :stores
 
-
   resources :controls
 
-
   get "user/index"
-
-  get "store/index"
-
-  get "control/index"
   
   resources :line_items
 
