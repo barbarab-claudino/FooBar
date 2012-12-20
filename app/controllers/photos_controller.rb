@@ -24,7 +24,8 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
-    @photo = Photo.new(:product_id => params[:product_id])
+    #@photo = Photo.new(:product_id => params[:product_id])
+	 @photo = Photo.new
   end
 
   # GET /photos/1/edit
@@ -37,7 +38,6 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
   @photo = Photo.new(params[:photo])
-	#@photo = Photo.new(params[:photo])
 	
     respond_to do |format|
       if @photo.save

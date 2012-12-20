@@ -3,7 +3,8 @@
 <% end %>
 
 <h1>Listagem de produtos</h1>
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Novo Produto', new_product_path %>
+	<%= link_to 'Voltar para Admin', control_path %> 
 
 <% @products.each do |product| %>
 	<div class="entry">
@@ -14,7 +15,9 @@
 		</div>
 
 			<div class="category_line">
-				<span class="category"><%= product.category.name %></span>
+				<% if product.category.name %>
+					<span class="category"><%= product.category.name %></span>
+				<% end %>	
 			</div>
 	</div>
 
@@ -24,5 +27,6 @@
 
 	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Você quer mesmo deletar este produto?' } %>
 	<%= link_to 'Edit', edit_product_path(product) %>
+
 
 <% end %>
