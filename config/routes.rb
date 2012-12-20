@@ -1,33 +1,33 @@
 FooBar::Application.routes.draw do
+  resources :stores
+
+
+  resources :controls
+
+
+  get "user/index"
+
   get "store/index"
 
   get "control/index"
-
- 
-
-
+  
   resources :line_items
 
-
   resources :carts
-
-
+  
   resources :categories
 
   resources :products 
 
   resources :photos 
 
-
   resources :clients
-
 
   resources :admins
 
-
   resources :fabricantes
 
-  root to: 'control#index', as: 'control'
+  root to: 'user#index', as: 'user'
   
 
   # The priority is based upon order of creation:

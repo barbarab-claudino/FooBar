@@ -1,0 +1,18 @@
+﻿<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Produtos em Destaque</h1>
+
+<% @products.each do |product| %>
+<div class="entry">
+	<% if product.photo.first %>
+		<%= image_tag product.photo.first.image_url %>
+	<% end %>
+	<h3><%= product.name %></h3>
+	<%= sanitize(product.description) %>
+	<div class="price_line">
+	<span class="price"><%= product.price %></span>
+</div>
+</div>
+<% end %>
