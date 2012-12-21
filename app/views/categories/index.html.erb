@@ -1,4 +1,4 @@
-<h1>LIsta de categorias</h1>
+﻿<h1>Lista de categorias</h1>
 <%= link_to 'Voltar para Admin', controls_path %> 
 
 <table>
@@ -16,7 +16,7 @@
     <td><%= category.description %></td>
     <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Você tem certeza? Caso haja um produto associado, a ação será anulada' } %></td>
   </tr>
 <% end %>
 </table>

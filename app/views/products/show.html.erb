@@ -12,7 +12,7 @@
 
 <p>
   <b>Main photo:</b>
-  <%= @product.main_photo %>
+  <%=image_tag( @product.photo) %>
 </p>
 
 <p>
@@ -42,4 +42,4 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %> |
-<%= link_to 'Voltar para Admin', control_path %> 
+<%= link_to 'Voltar para Admin', controls_path %> 

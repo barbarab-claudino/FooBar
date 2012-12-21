@@ -7,7 +7,6 @@ margin-top: 50px;
 margin-bottom: 50px;
 margin-left: 80px;
 margin-right: 80px;
-border: 1px black solid;
 }
 
 h1{
@@ -23,8 +22,9 @@ float: left;
 }
 #header{
 padding:20px;
-border: 2px #228B22 solid;
+border: 3px #228B22 dashed;
 margin: 20px;
+height:150px;
 }
 #conteudo{
 margin-top:30px;
@@ -64,7 +64,7 @@ margin-right: 250px;
 	padding: 3px 0 3px 6px; 
 	border: 2px;
 	border-color:#fff;
-	border-style:dashed;
+	border-style:solid;
 	display: block;
 	background: #228B22; 
 	color: #fff;
@@ -73,8 +73,9 @@ margin-right: 250px;
 
 #menu li a:hover { 
 	background: #fff;
-	border-color:#000;
-	color: #000; 
+	border-color:#228B22;
+	color: #228B22;
+	border-style:dashed;
 }
 
 a:link

@@ -10,34 +10,25 @@ class ProductsController < ApplicationController
     end
   end
 
+
   # GET /products/1
   # GET /products/1.json
   def show
-    @product = Product.select(:id_categoria = params[:category_id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @product }
-    end
+    @product = Product.find(params[:id])
+    	respond_to do |format|
+      	    format.html # show.html.erb
+      	    format.json { render json: @product }
+     end
   end
 
 
-# GET /products/1
-  # GET /products/1.json
-  def showCat
-    @product = Product.where(:id_categoria = params[:category_id])
 
-    respond_to do |format|
-      format.html # showCat.html.erb
-      format.json { render json: @product }
-    end
-  end
 
   # GET /products/new
   # GET /products/new.json
   def new
     @product = Product.new
-	@categories = Category.all
+    @categories = Category.all
 	
     respond_to do |format|
       format.html # new.html.erb

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>FooBar</title>
@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-	<%=form_tag buscas_path, :method => :get do %>
-		Buscar por: <%=text_field_tag :busca, params[:busca] %> <%=submit_tag 'Buscar'%>
-    <% end %>
+	
+  <span id="links"> <%=form_tag buscas_path, :method => :get do %>
+      Buscar por: <%=text_field_tag :busca, params[:busca] %> <%=submit_tag 'Buscar'%>
+   <% end %></span> <br/>
 
 <%= yield %>
 

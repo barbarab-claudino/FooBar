@@ -3,9 +3,9 @@ FooBar::Application.routes.draw do
 
   resources :controls
 
-  get "user/index"
-  
   match 'buscas' => 'buscas#index', :as => :buscas
+  
+  get "user/index"
   
   resources :line_items
 
