@@ -5,6 +5,8 @@ FooBar::Application.routes.draw do
 
   get "user/index"
   
+  match 'buscas' => 'buscas#index', :as => :buscas
+  
   resources :line_items
 
   resources :carts

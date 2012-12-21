@@ -1,0 +1,11 @@
+ <% @resultados.each do |resultado|%>
+  <% objeto = resultado.cast%>
+<%=objeto.titulo%>
+
+
+
+<%=truncate objeto.texto, :length => 200%>
+
+<%=link_to 'ver', objeto%>
+
+  <% end %>
