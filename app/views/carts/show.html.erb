@@ -1,11 +1,21 @@
-<% if notice %>
+﻿<% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 <h2>Carrinho de compras</h2>
-<ul>
-	<% @cart.line_items.each do |item| %>
-		<li><%= item.quantity %> &times; <%= item.product.name %></li>
-	<% end %>
-</ul>
 
+<table>
+	<% @cart.line_items.each do |item| %>
+	<tr>
+		<td><%= item.quantity %>&times;</td>
+		<td><%= item.product.name %></td>
+		<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+	</tr>
+	<% end %>
+	<tr class="total_line">
+		<td colspan="2">Total</td>
+		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+	</tr>
+</table>
+
+<%= button_to 'Limpar o carrinho', @cart, method: :delete, confirm: 'Você tem certeza?' %>
 <%= link_to 'Voltar', user_path %> 
