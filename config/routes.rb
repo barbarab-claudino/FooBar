@@ -1,4 +1,6 @@
 FooBar::Application.routes.draw do
+  get "menu/index"
+
   resources :stores
 
   resources :controls

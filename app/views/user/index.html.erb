@@ -2,18 +2,12 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<div id="header">
 
-	<span id="logo"><%= image_tag("logo.png") %></span>	
-	<h1>FooBar - Online Store</h1>
-	<span id="links"><%= link_to 'Cliente', stores_path %></span> <br/>
-	<span id="links"><%= link_to 'Administrador', controls_path %></span>
-</div>
 <div id="conteudo">
 	<div id="menu">
 		<ul>
 		<% @categories.each do |categoria| %>
-			<li><%= link_to categoria.name, :controller => "products", :action => "show", :id => categoria.id %></li>
+			<li><%= link_to categoria.name, :controller => "menu", :action => "index", :id => categoria.id %></li>
 		<% end %>
 		</ul>
 	</div>

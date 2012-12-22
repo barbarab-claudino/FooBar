@@ -7,10 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-	
-  <span id="links"> <%=form_tag buscas_path, :method => :get do %>
-      Buscar por: <%=text_field_tag :busca, params[:busca] %> <%=submit_tag 'Buscar'%>
-   <% end %></span> <br/>
+<div id="header">
+
+	<span id="logo"><%= image_tag("logo.png") %></span>	
+	<span id="links"> <%=form_tag buscas_path, :method => :get do %>
+      	Buscar por: <%=text_field_tag :busca, params[:busca] %> <%=submit_tag 'Buscar'%>
+   	<% end %></span> <br/>
+	<h1>FooBar - Online Store</h1>
+	<span id="links"><%= link_to 'Cliente', stores_path %></span> <br/>
+	<span id="links"><%= link_to 'Administrador', controls_path %></span>
+</div>
 
 <%= yield %>
 
