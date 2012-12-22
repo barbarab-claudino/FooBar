@@ -1,0 +1,11 @@
+<h1>Resultado da busca</h1>
+
+<div class="box">
+<% @resultados.each do |resultado|%>
+	<% objeto = resultado.cast%>
+	<h3><%=objeto.name%></h3>
+	<%=truncate objeto.description, :length => 200%>
+	<%=link_to 'mais', :controller => "interface_cliente", :action => "show_product", :produto => objeto.id %>
+<% end %>
+	
+</div>	

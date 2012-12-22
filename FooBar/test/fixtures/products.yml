@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+code:
+  name: Code
+  price: 7.15
+  main_photo: 
+  description: Crossing over into general-interest non-fiction from his popular programming manuals, Charles Petzold has written Code The Hidden Language of Computer Hardware and
+  category_id: 0 
+
+ruby_kindle:
+  name: The Ruby Way, Second Edition
+  price: 19.12
+  main_photo: 
+  description: This is the eBook version of the printed book. Ruby is an agile object-oriented
+  category_id: 0 
+ 

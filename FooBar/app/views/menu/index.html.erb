@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Price:</b>
+  <%= produto.price %>
+</p>
+
+<p>
   <b>Main photo:</b>
   <%=image_tag( produto.main_photo) %>
 </p>
@@ -22,11 +27,6 @@
   <% end %>
   <div class="clear"></div>
 </div>
-
-<p>
-  <b>Price:</b>
-  <%= number_to_currency(produto.price) %> <%= button_to 'Add to Cart', line_items_path(product_id: produto) %>
-</p>
 
 <%= link_to 'Voltar', user_path %> 
 

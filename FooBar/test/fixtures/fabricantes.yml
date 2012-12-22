@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+samsung:
+  name: Samsung
+  cnpj: 7583902938
+  phone: 93947584921
+  address: Rua Das Flores, 76
+  email: samsung@samsung.com
+
+editorac:
+  name: Editora C
+  cnpj: 12801293814812
+  phone: 12312312
+  address: Rua Josezinho, 50
+  email: editorac@gmail.com

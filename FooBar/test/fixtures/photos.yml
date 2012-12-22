@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  image: http://ecx.images-amazon.com/images/I/31GBgcA5PML._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA240_SH20_OU02_.jpg
+  product_id: 1
+
+two:
+  image: MyString
+  product_id: 2

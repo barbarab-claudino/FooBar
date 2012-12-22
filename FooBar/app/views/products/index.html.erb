@@ -1,0 +1,32 @@
+﻿<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Listagem de produtos</h1>
+<%= link_to 'Novo Produto', new_product_path %>
+	<%= link_to 'Voltar para Admin', controls_path %> 
+
+<% @products.each do |product| %>
+	<div class="entry">
+		<h3><%= product.name %></h3>
+		
+		<div class="price_line">
+			<span class="price"><%= product.price %></span>
+		</div>
+
+			<div class="category_line">
+				<% if product.category.name %>
+					<span class="category"><%= product.category.name %></span>
+				<% end %>	
+			</div>
+	</div>
+
+	<% if product.photo.first %>
+		<%= image_tag product.photo.first.image_url %>
+	<% end %>
+
+	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Você quer mesmo deletar este produto?' } %>
+	<%= link_to 'Edit', edit_product_path(product) %>
+
+
+<% end %>

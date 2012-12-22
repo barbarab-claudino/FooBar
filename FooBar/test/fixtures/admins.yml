@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+admin1:
+  name: Jose
+  login: admin
+  password: abc123
+
+admin2:
+  name: Pelin
+  login: pelinAdmin
+  password: def456

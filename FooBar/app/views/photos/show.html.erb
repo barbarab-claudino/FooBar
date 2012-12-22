@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<%= image_tag @photo.image_url.to_s if @photo.image? %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @photo.product %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', controls_path %>

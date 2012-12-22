@@ -1,0 +1,42 @@
+// Place all the styles related to the User controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left: 80px;
+margin-right: 80px;
+}
+
+h1{
+text-align: center;
+}
+
+#links{
+float:right;
+}
+#logo{
+float: left;
+
+}
+#header{
+padding:20px;
+border: 3px #228B22 dashed;
+margin: 20px;
+height:150px;
+}
+#conteudo{
+margin-top:30px;
+height: 400px;
+padding:20px;
+}
+#destaque{
+width:500px;
+height: 250px;
+border: 3px #228B22 dashed;
+float: right;
+margin-right: 250px;
+}
+
+

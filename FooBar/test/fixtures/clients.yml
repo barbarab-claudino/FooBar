@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+client1:
+  name: Julia
+  cpf: 19382131231
+  email: julia@gmail.com
+  address: Rua da Residencia, 07
+  phone: 293812391283
+  login: juhhcarmona
+  password: 123456
+
+client2:
+  name: Barbara
+  cpf: 2310231
+  email: barbara@gmail.com
+  address: Rua batatinha, 34
+  phone: 0923842342
+  login: bahbbc
+  password: 654321
+

@@ -1,0 +1,32 @@
+<h1>Lista de fabricantes</h1>
+<%= link_to 'Voltar para Admin', controls_path %> 
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cnpj</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fabricantes.each do |fabricante| %>
+  <tr>
+    <td><%= fabricante.name %></td>
+    <td><%= fabricante.cnpj %></td>
+    <td><%= fabricante.phone %></td>
+    <td><%= fabricante.address %></td>
+    <td><%= fabricante.email %></td>
+    <td><%= link_to 'Show', fabricante %></td>
+    <td><%= link_to 'Edit', edit_fabricante_path(fabricante) %></td>
+    <td><%= link_to 'Destroy', fabricante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fabricante', new_fabricante_path %>
