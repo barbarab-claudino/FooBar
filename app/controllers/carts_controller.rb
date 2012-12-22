@@ -81,7 +81,7 @@
 	@cart.destroy
 	session[:cart_id] = nil
 	respond_to do |format|
-		format.html { redirect_to store_url, notice: 'O seu carrinho está vazio' }
+		format.html { redirect_to user_url, notice: 'O seu carrinho está vazio' }
 		format.json { head :no_content }
 		end
 	end

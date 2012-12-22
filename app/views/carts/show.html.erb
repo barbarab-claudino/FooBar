@@ -17,5 +17,6 @@
 	</tr>
 </table>
 
+<%= button_to "Checkout", new_order_path, method: :get %>
 <%= button_to 'Limpar o carrinho', @cart, method: :delete, confirm: 'Você tem certeza?' %>
 <%= link_to 'Voltar', user_path %> 
