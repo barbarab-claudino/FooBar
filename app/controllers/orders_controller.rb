@@ -3,7 +3,7 @@
   # GET /orders.json
   def index
     @orders = Order.all
-
+	@categories = Category.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -13,6 +13,7 @@
   # GET /orders/1
   # GET /orders/1.json
   def show
+	@categories = Category.all
     @order = Order.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +25,7 @@
   # GET /orders/new
   # GET /orders/new.json
   def new
+	@categories = Category.all
 	@cart = current_cart
 	if @cart.line_items.empty?
 		redirect_to user_url, notice: 'Seu carrinho está vazio'
@@ -40,12 +42,14 @@
 
   # GET /orders/1/edit
   def edit
+	@categories = Category.all
     @order = Order.find(params[:id])
   end
 
   # POST /orders
   # POST /orders.json
   def create
+	@categories = Category.all
     @order = Order.new(params[:order])
 	@order.add_line_items_from_cart(current_cart)
 	
@@ -67,6 +71,7 @@
   # PUT /orders/1
   # PUT /orders/1.json
   def update
+	@categories = Category.all
     @order = Order.find(params[:id])
 
     respond_to do |format|

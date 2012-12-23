@@ -1,4 +1,6 @@
 FooBar::Application.routes.draw do
+  get "interface_cliente/show_product"
+
   resources :orders
 
 

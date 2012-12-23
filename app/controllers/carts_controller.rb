@@ -3,6 +3,7 @@
   # GET /carts.json
   def index
     @carts = Cart.all
+	@categories = Category.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +14,7 @@
   # GET /carts/1
   # GET /carts/1.json
   def show
+	@categories = Category.all
     begin
 		@cart = Cart.find(params[:id])
 	rescue ActiveRecord::RecordNotFound

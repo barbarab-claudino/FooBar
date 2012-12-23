@@ -3,8 +3,10 @@
 <% end %>
 
 <h1>Listagem de produtos</h1>
+<div class="conteudo">
 <%= link_to 'Novo Produto', new_product_path %>
-	<%= link_to 'Voltar para Admin', controls_path %> 
+<%= link_to 'Voltar para Admin', controls_path %>
+<%= link_to 'Home', user_path %> 
 
 <% @products.each do |product| %>
 	<div class="entry">
@@ -30,3 +32,4 @@
 
 
 <% end %>
+</div>

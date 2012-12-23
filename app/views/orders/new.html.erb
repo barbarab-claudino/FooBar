@@ -1,4 +1,11 @@
-<div class="depot_form">
+<div id="menu">
+		<ul>
+		<% @categories.each do |categoria| %>
+			<li><%= link_to categoria.name, :controller => "menu", :action => "index", :id => categoria.id %></li>
+		<% end %>
+		</ul>
+	</div>
+<div class="conteudo">
 	<fieldset>
 		<legend>Por favor coloque seus dados</legend>
 		<%= render 'form' %>

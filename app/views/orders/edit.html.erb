@@ -1,6 +1,15 @@
 <h1>Editing order</h1>
+<div id="menu">
+		<ul>
+		<% @categories.each do |categoria| %>
+			<li><%= link_to categoria.name, :controller => "menu", :action => "index", :id => categoria.id %></li>
+		<% end %>
+		</ul>
+	</div>
 
+<div class="conteudo">
 <%= render 'form' %>
 
 <%= link_to 'Show', @order %> |
 <%= link_to 'Back', orders_path %>
+</div>
