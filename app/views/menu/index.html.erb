@@ -11,8 +11,11 @@
 
 <div class="conteudo">
 <p>
-  <b>Name:</b>
-  <h3><%=link_to product.name, :controller => "interface_cliente", :action => "show_product", :produto => product.id %></h3>
+  <h3><%=link_to produto.name, :controller => "interface_cliente", :action => "show_product", :produto => produto.id %></h3>
+
+<p>
+  <b>Photo:</b>
+  <%=image_tag( produto.main_photo) %>
 </p>
 
 <p>
@@ -20,7 +23,6 @@
   <%= truncate(strip_tags(produto.description),
 length: 80) %>
 </p>
-
 <div id="photos">
   <% for photo in produto.photo %>
     <div class="photo">

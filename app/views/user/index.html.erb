@@ -12,12 +12,5 @@
 		</ul>
 	</div>
 	<div id="destaque">
-		<% @products.each do |p| %>
-			<% @categories.each do |c| %>
-				<% if p.category.name == c.name %>
-					<%= image_tag(p.photo.first.image_url)%>
-				<%end%>
-			<%end%>
-		<%end%> 
  	</div>
 </div>
